@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script> src="https://unpkg.com/axios@1.6.7/dist/axios.min.js" </script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="widget">
+        <h2>Check Airtime</h2>
+        <div class="usage-list" id="usage-list"></div>
+        <button type="button" onclick="addUsage()">Add Usage</button>
+        <input type="number" id="available" placeholder="Available amount (e.g., 54)">
+        <button onclick="checkAirtime()">Check</button>
+        <div class="result" id="result"></div>
+    </div>
+
+
+    <div class="widget">
+        <h2>Set Phone Bill Price</h2>
+        <select id="type" onchange="updatePrice()">
+            <option value="">Select Type</option>
+            <option value="call">Call</option>
+            <option value="sms">SMS</option>
+        </select>
+        <input type="number" id="price" placeholder="Price" readonly>
+        <button onclick="setPrice()">Set Price</button>
+        <div class="result" id="results"></div>
+    </div>
+
+
+    <div class="widget">
+        <h2>Calculate Phone Bill</h2>
+        <textarea id="bill" rows="4" placeholder="Enter usage (e.g., call,sms,call)"></textarea>
+        <button onclick="calculateTotal()">Calculate Total</button>
+        <div class="result" id="resultss"></div>
+        <div class="prices" id="prices"></div>
+    </div>
+
+
+    <div class="widget">
+        <h2>Analyze Sentence</h2>
+        <textarea id="sentence" rows="4" placeholder="Enter sentence here"></textarea>
+        <button onclick="analyzeSentence()">Analyze</button>
+        <div class="result" id="resultsss"></div>
+    </div>
+    <script src="./alpine.js"></script>
+</body>
+</html>

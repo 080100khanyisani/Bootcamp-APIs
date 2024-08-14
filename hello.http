@@ -1,0 +1,46 @@
+
+POST http://localhost:3011/api/hello HTTP/1.1
+content-type: application/json
+
+{
+    "language" : "Xhosa",
+    "greeting" : "Molo"
+}
+
+###
+
+GET http://localhost:3011/api/hello?greeting=Thobela&language=Sepedi HTTP/1.1
+
+### WORD GAME
+
+GET http://localhost:3011/api/word_game?sentence=the sentence you want to analyze HTTP/1.1
+
+### TOTAL PHONE BILL
+POST http://localhost:3011/api/phonebill/total HTTP/1.1
+content-type: application/json
+
+{
+    "bill": "call,sms,call"
+}
+
+### 
+GET http://localhost:3011/api/phonebill/prices HTTP/1.1
+
+
+### TYPE
+POST http://localhost:3011/api/phonebill/price HTTP/1.1
+content-type: application/json
+
+{
+  "type" : "sms",
+  "price" : 2.85
+}
+
+### ENOUGH AIRTIME 
+POST http://localhost:3011/api/enough HTTP/1.1
+content-type: application/json
+
+{
+   "usage": "call,sms,call",
+   "available" : 54
+}
